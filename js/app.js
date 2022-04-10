@@ -12,16 +12,20 @@
  * JS Standard: ESlint
  * 
 */
+
+
+// build the nav
+
 function createnavbar(){
-    const num_sec =5 ;
+    const num_sec = 4;
     const section_names = ["Home", "About", "Product", "Pricing"];
     var ul=document.getElementById("Menu");
-    for(let i=0; i< num_sec; i++){
+    for(let i = 0; i < num_sec; i++){
         var a = document.createElement("a");
-        let section_name="";
+        let section_name = "";
         if(i>3){
                 section_name = "Section ".concat(i+1);
-                var sentence="This is ".concat(section_name);
+                var sentence = "This is ".concat(section_name);
                 var sect = document.createElement("SECTION");
                 sect.setAttribute("id",section_name);
                 sect.innerHTML = sentence;
@@ -38,6 +42,8 @@ function createnavbar(){
         li.appendChild(a);
         ul.appendChild(li);
     }
+    var current = location.pathname;
+    alert(current);
 }
 
 /*
@@ -65,7 +71,6 @@ function createnavbar(){
  * 
 */
 
-// build the nav
 
 
 // Add class 'active' to section when near top of viewport
