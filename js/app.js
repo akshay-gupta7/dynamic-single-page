@@ -93,5 +93,15 @@ function createnavbar(){
 
 // Set sections as active
 
-const sections = document.querySelectorAll('section');
+let sections = document.querySelectorAll('section');
 const navLi = document.querySelectorAll('nav .container ul li');
+
+window.addEventListener('scroll' , ()=> {
+    let current = '';
+
+    sections.forEach( section =>{
+        const sectionTop = section.offsetTop;
+        console.log(sectionTop)
+    })
+
+})
