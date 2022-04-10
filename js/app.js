@@ -14,13 +14,20 @@
 */
 function createnavbar(){
     const num_sec=4;
+    const section_names=["Home", "About", "Product", "Pricing"];
     var ul=document.getElementById("Menu");
     for(let i=0; i< num_sec; i++){
-        let section_name="Section ".concat(i);
-        var li=document.createElement("li");
         var a = document.createElement("a");
-        a.textContent = section_name;
-        var link="#".concat(section_name);
+        let section_name="";
+        if(i>3){
+            section_name="Section ".concat(i);
+        }
+        else{
+            section_name=section_names[i];
+        }
+        a.textContent=section_name;
+        var li=document.createElement("li");
+        var link="#".concat(section_name.toLowerCase());
         a.setAttribute('href', link);
         li.setAttribute("class", "links");
         li.appendChild(a);
