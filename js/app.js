@@ -12,6 +12,21 @@
  * JS Standard: ESlint
  * 
 */
+function createnavbar(){
+    const num_sec=4;
+    var ul=document.getElementById("Menu");
+    for(let i=0; i< num_sec; i++){
+        let section_name="Section ".concat(i);
+        var li=document.createElement("li");
+        var a = document.createElement("a");
+        a.textContent = section_name;
+        var link="#".concat(section_name);
+        a.setAttribute('href', link);
+        li.setAttribute("class", "links");
+        li.appendChild(a);
+        ul.appendChild(li);
+    }
+}
 
 /*
  * Comments should be present at the beginning of each procedure and class.
