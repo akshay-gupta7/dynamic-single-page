@@ -38,6 +38,7 @@ window.addEventListener('load', function createnavbar(){
         var li = document.createElement("li");
         var link = "#".concat(section_name.toLowerCase());
         a.setAttribute('href', link);
+        a.setAttribute('id', "link".concat(section_name.toLowerCase()));
         li.setAttribute("class", section_name.toLowerCase());
         /*if(i==0){
             li.setAttribute("class", "active");
