@@ -119,3 +119,17 @@ window.addEventListener('scroll' , ()=> {
     })
 
 })
+
+
+
+var anchorsindoc = document.getElementsByTagName("a");
+
+for (let i = 0; i < anchorsindoc.length; i++){
+    anchorsindoc[i].addEventListener("click", function(event){
+        event.preventDefault();
+        if(confirm('Are you sure')){
+            window.location = this.href;
+        }
+    }, false);
+
+}
