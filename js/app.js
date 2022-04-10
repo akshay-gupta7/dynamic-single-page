@@ -16,7 +16,7 @@
 
 // build the nav
 
-function createnavbar(){
+window.addEventListener('load', function createnavbar(){
     const num_sec = 4;
     const section_names = ["Home", "About", "Product", "Pricing"];
     var ul=document.getElementById("Menu");
@@ -38,7 +38,7 @@ function createnavbar(){
         var li = document.createElement("li");
         var link = "#".concat(section_name.toLowerCase());
         a.setAttribute('href', link);
-        li.setAttribute("class", "links");
+        li.setAttribute("class", section_name.toLowerCase());
         /*if(i==0){
             li.setAttribute("class", "active");
         }*/
@@ -48,7 +48,7 @@ function createnavbar(){
     }
     var current = location.pathname;
     //alert(current);
-}
+});
 
 /*
  * Comments should be present at the beginning of each procedure and class.
@@ -93,15 +93,28 @@ function createnavbar(){
 
 // Set sections as active
 
-let sections = document.querySelectorAll('section');
-const navLi = document.querySelectorAll('nav .container ul li');
+let sections = '';
+let navLi = '';
 
 window.addEventListener('scroll' , ()=> {
+    sections = document.querySelectorAll('section');
+    navLi = document.querySelectorAll('nav .container ul li');
     let current = '';
 
     sections.forEach( section =>{
         const sectionTop = section.offsetTop;
-        console.log(sectionTop)
+        //console.log(sectionTop)
+        const sectionHeight = section.clientHeight;
+        if(pageYOffset >= (sectionTop - sectionHeight/3.33)){
+            current = section.getAttribute('id');
+        }
+
+        navLi.forEach(li => {
+            li.classList.remove('active');
+            if(li.classList.contains(current)){
+                li.classList.add('active');
+            }
+        })
     })
 
 })
