@@ -39,7 +39,10 @@ function createnavbar(){
         var link = "#".concat(section_name.toLowerCase());
         a.setAttribute('href', link);
         li.setAttribute("class", "links");
-        li.id = "Section".concat(section_name.toLowerCase());
+        /*if(i==0){
+            li.setAttribute("class", "active");
+        }*/
+        //li.id = "Section".concat(section_name.toLowerCase());
         li.appendChild(a);
         ul.appendChild(li);
     }
@@ -90,3 +93,5 @@ function createnavbar(){
 
 // Set sections as active
 
+const sections = document.querySelectorAll('section');
+const navLi = document.querySelectorAll('nav .container ul li');

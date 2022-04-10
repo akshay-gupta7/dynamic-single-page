@@ -126,3 +126,12 @@ h1{
         left:0;
     }
 }
+
+nav .container ul li.active{
+    background-color: crimson;
+    transition 0.4 ease background-color;
+}
+
+nav .container ul li.active a{
+    color: white;
+}
