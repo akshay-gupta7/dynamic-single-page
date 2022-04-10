@@ -52,19 +52,19 @@ section{
 }
 
 #home{
-    background-color: #59405C;
+    background-color: #8d8daa;
 }
 
 #about{
-    background-color: #ED6663;
+    background-color: #dfdfde;
 }
 
 #product{
-    background-color: #B52B65;
+    background-color: #f7f5f2;
 }
 
 #pricing{
-    background-color: #3C2C3E;
+    background-color: #f56d91;
 }
 
 h1{
@@ -76,7 +76,7 @@ h1{
 
 a:active, a:hover{
     background: #1b9bff;
-    transition: 0.5s;
+    transition: .5s;
 }
 
 .checkbtn{
