@@ -16,7 +16,7 @@ div, section, span, ul, li, a, nav{
     box-sizing: border-box;
 }
 
-nav{
+nav .container{
     width: 100%;
     display: flex;
     justify-content: space-between;
@@ -74,7 +74,7 @@ h1{
     transform: translate(-50%,-50%);
 }
 
-a:active, a:hover{
+:active, a:hover{
     background: #1b9bff;
     transition: .5s;
 }

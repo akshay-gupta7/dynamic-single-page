@@ -39,11 +39,12 @@ function createnavbar(){
         var link = "#".concat(section_name.toLowerCase());
         a.setAttribute('href', link);
         li.setAttribute("class", "links");
+        li.id = "Section".concat(section_name.toLowerCase());
         li.appendChild(a);
         ul.appendChild(li);
     }
     var current = location.pathname;
-    alert(current);
+    //alert(current);
 }
 
 /*
@@ -75,9 +76,7 @@ function createnavbar(){
 
 // Add class 'active' to section when near top of viewport
 
-
 // Scroll to anchor ID using scrollTO event
-
 
 /*
  * End Main Functions
