@@ -88,11 +88,9 @@ window.addEventListener('load', function createnavbar(){
  * 
 */
 
-// Build menu 
 
-// Scroll to section on link click
 
-// Set sections as active
+// Set sections and li as active
 
 let sections = '';
 let navLi = '';
@@ -130,6 +128,7 @@ window.addEventListener('scroll' , ()=> {
 
 })
 
+// Add anchor ID and scroll to that anchor using ScrollIntoView
 
 document.querySelectorAll('a[href^="#"]').forEach(anchor =>{
     anchor.addEventListener('click', function(e){
