@@ -19,14 +19,14 @@
 window.addEventListener('load', function createnavbar(){
     const num_sec = 4;
     const section_names = ["Home", "About", "Product", "Pricing"];
-    var ul=document.getElementById("Menu");
+    let ul=document.getElementById("Menu");
     for(let i = 0; i < num_sec; i++){
-        var a = document.createElement("a");
+        let a = document.createElement("a");
         let section_name = "";
         if(i>3){
                 section_name = "Section ".concat(i+1);
-                var sentence = "This is ".concat(section_name);
-                var sect = document.createElement("SECTION");
+                let sentence = "This is ".concat(section_name);
+                let sect = document.createElement("SECTION");
                 sect.setAttribute("id",section_name);
                 sect.innerHTML = sentence;
                 document.body.append(sect);
@@ -35,8 +35,8 @@ window.addEventListener('load', function createnavbar(){
             section_name = section_names[i];
         }
         a.textContent = section_name;
-        var li = document.createElement("li");
-        var link = "#".concat(section_name.toLowerCase());
+        let li = document.createElement("li");
+        let link = "#".concat(section_name.toLowerCase());
         a.setAttribute('href', link);
         a.setAttribute('id', "link".concat(section_name.toLowerCase()));
         li.setAttribute("class", section_name.toLowerCase());
@@ -47,7 +47,7 @@ window.addEventListener('load', function createnavbar(){
         li.appendChild(a);
         ul.appendChild(li);
     }
-    var current = location.pathname;
+    let current = location.pathname;
     //alert(current);
 });
 
@@ -121,8 +121,7 @@ window.addEventListener('scroll' , ()=> {
 })
 
 
-
-var anchorsindoc = document.getElementsByTagName("a");
+let anchorsindoc = document.getElementsByTagName("a");
 
 for (let i = 0; i < anchorsindoc.length; i++){
     anchorsindoc[i].addEventListener("click", function(event){
