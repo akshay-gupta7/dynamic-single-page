@@ -120,7 +120,7 @@ h1{
         transition: all .5s;
     }
     nav ul li{
-        display: block;
+        display: inline;
     }
     nav ul li a{
         font-size: 20px;
