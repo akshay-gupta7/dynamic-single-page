@@ -51,6 +51,10 @@ section{
     position: relative;
 }
 
+section.now-active{
+    background-color: powderblue !important;
+}
+
 #home{
     background-color: #8d8daa;
 }
@@ -67,6 +71,8 @@ section{
     background-color: #f56d91;
 }
 
+
+
 h1{
     position: absolute;
     top: 50%;
@@ -75,7 +81,7 @@ h1{
 }
 
 :active, a:hover{
-    background: #1b9bff;
+    /*background: #1b9bff;*/
     transition: .5s;
 }
 
@@ -120,7 +126,7 @@ h1{
         font-size: 20px;
     }
     a:hover, a:active{
-        background: #0082e6;
+        /*background: #0082e6;*/
     }
     #check:checked ~ ul{
         left:0;

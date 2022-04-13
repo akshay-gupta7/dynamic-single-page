@@ -103,6 +103,7 @@ window.addEventListener('scroll' , ()=> {
     let current = '';
 
     sections.forEach( section =>{
+        let rect = section.getBoundingClientRect();
         const sectionTop = section.offsetTop;
         //console.log(sectionTop)
         const sectionHeight = section.clientHeight;
@@ -110,25 +111,31 @@ window.addEventListener('scroll' , ()=> {
             current = section.getAttribute('id');
         }
 
-        navLi.forEach(li => {
+        /*navLi.forEach(li => {
             li.classList.remove('active');
             if(li.classList.contains(current)){
                 li.classList.add('active');
             }
-        })
+        })*/
+
+        if (rect.top <150 && rect.bottom >150){
+            document.querySelector(`.${section.id}`).classList.add('active')
+            section.classList.add('now-active')
+        }
+        else{
+            document.querySelector(`.${section.id}`).classList.remove('active')
+            section.classList.remove('now-active')
+        }
     })
 
 })
 
 
-let anchorsindoc = document.getElementsByTagName("a");
-
-for (let i = 0; i < anchorsindoc.length; i++){
-    anchorsindoc[i].addEventListener("click", function(event){
-        event.preventDefault();
-        if(confirm('Are you sure')){
-            window.location = this.href;
-        }
-    }, false);
-
-}
+document.querySelectorAll('a[href^="#"]').forEach(anchor =>{
+    anchor.addEventListener('click', function(e){
+        e.preventDefault();
+        document.querySelector(this.getAttribute('href')).scrollIntoView({
+            behavior: "smooth"
+        });
+    });
+});
